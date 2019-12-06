@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h2>Product Detail</h2>
+        <table align="center">
+            <tr>
+                <td>
+                    <img src="data:image/jpg;base64,<%= product.image %>" width="400" height="400"/>
+                </td>
+                <td>
+                    ID : <%= product._id %> </br>
+                    Name : <%= product.name %> </br>
+                    Price : <%= product.price %> </br>
+                    <form action="/addtocart" method="POST">
+                        <input type="hidden" name="txtID" value="<%= product._id %>" />
+                        Quantity : <input type="text" name="txtQuantity" /> </br>
+                        <input type="submit" value="Add To Cart"/>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
